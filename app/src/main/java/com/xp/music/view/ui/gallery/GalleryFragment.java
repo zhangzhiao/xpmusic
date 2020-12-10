@@ -34,7 +34,6 @@ public class GalleryFragment extends Fragment {
         recyclerView = view.findViewById(R.id.love_recycle);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(linearLayoutManager);
-
         MyMusicLoveAdapter adapter = new MyMusicLoveAdapter(getContext(), data -> MainActivity.getIn().playMusic(data),musicManager.searchAll());
         recyclerView.setAdapter(adapter);
     }
